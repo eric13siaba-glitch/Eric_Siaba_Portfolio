@@ -120,6 +120,12 @@ dialog.lb::backdrop{background:rgba(3,8,16,.88)}
 dialog.lb img{max-width:96vw;max-height:90vh;width:auto;height:auto;border-radius:8px;display:block;margin:auto}
 dialog.lb button{position:fixed;top:14px;right:16px;background:var(--panel);color:var(--text);border:1px solid var(--line);border-radius:999px;padding:6px 14px;font:inherit;cursor:pointer}
 .facts{background:var(--panel);gap:0}.facts div{outline:1px solid var(--line);outline-offset:0}
+
+/* Keep the stats row on the first screen of a 1366x768 laptop. */
+.hero{min-height:auto;padding:48px 0 32px}
+h1{font-size:clamp(2.8rem,8vw,5.2rem)}
+.lead{margin:16px 0 18px}.tags{margin-bottom:20px}
+.scale{margin-top:36px}
 </style></head><body>
 <nav><div class="wrap"><b><a href="#home">Eric Siaba</a></b><a class="l" data-v="home" href="#home">Home</a><a class="l" data-v="projects" href="#projects">Projects</a><a class="l" data-v="resume" href="#resume">Resume</a></div></nav>
 <main><div class="view" id="v-plat-digitization-automation" hidden><div class="wrap page"><p class="crumb"><a href="#projects">Projects</a> / Plat digitization automation, City of College Station</p><h1>Plat digitization automation, City of College Station</h1>
@@ -134,7 +140,7 @@ dialog.lb button{position:fixed;top:14px;right:16px;background:var(--panel);colo
 <li>Several AI agents review the calls independently and cross-check them against each other.</li>
 <li>The checked calls come out as a downloadable file that loads directly into ArcGIS Pro's Traverse tool.</li></ol></li></ul>
 <h2>What I found</h2><p>The automation saves more than three hours of manual data entry every week. Plats that used to be keyed in call by call now arrive ready to traverse, with the multi-agent check catching mistakes before they reach the geodatabase.</p>
-<h2>What I would do differently</h2><p>I would time the manual process before building anything, so the savings rest on a measured baseline rather than an estimate. I would also write the workflow down from the start, so someone else on the team could run and maintain it without me.</p></div>
+<h2>What I would do differently</h2><p>I would write the workflow down from the start, so someone else on the team could run and maintain it without me.</p></div>
 <div class="pager"><a href="#roseburg-road-ownership">Previous: Road and land-ownership data for 400,000 acres</a><a href="#highway-crime-analysis">Next: Do highways raise crime? A Houston buffer analysis</a></div></div></div><div class="view" id="v-highway-crime-analysis" hidden><div class="wrap page"><p class="crumb"><a href="#projects">Projects</a> / Do highways raise crime? A Houston buffer analysis</p><h1>Do highways raise crime? A Houston buffer analysis</h1>
 <dl class="facts"><div><dt>Course</dt><dd>GEOG 312: Data Analysis in Geography</dd></div><div><dt>When</dt><dd>April 2026, project draft</dd></div><div><dt>Team</dt><dd>Mia Clark, Alex Beane, Matthew Caldwell, Eric Siaba</dd></div><div><dt>Tools</dt><dd>ArcGIS Pro, R</dd></div><div><dt>Data</dt><dd>Houston crime data, TxDOT highways, census block groups</dd></div><div><dt>Status</dt><dd>Draft</dd></div></dl><div class="prose">
 <h2>The problem</h2><p>We asked what effect highways have on crime in a city. Our hypothesis was that fast, easy escape routes would mean more crime near highways.</p>
@@ -167,20 +173,17 @@ dialog.lb button{position:fixed;top:14px;right:16px;background:var(--panel);colo
 </div></div><div class="view" id="v-resume" hidden><div class="wrap page"><h1>Resume</h1><p class="meta">Texas A&amp;M University, BS Geographic Information Systems &amp; Technology. GPA 3.48. December 2026.</p>
 <p class="links"><a class="btn main" href="https://docs.google.com/document/d/101Xl3qMgBMFno9ogCfwZh5WUHGG5JG5vVGEvMIE9D7w/preview">Full resume</a></p>
 <ol class="tl">
-<li><h3>Cybersecurity Researcher, iSTAR Cybersecurity Lab</h3><span class="meta">College Station, Texas. August 2026 to present</span><ul>
-<li>Develop and maintain Python test-case scripts that automate security testing of Next Generation 911 (NG911) components in a DHS-funded research lab.</li>
-<li>Execute security tests, capture network traffic and log evidence with Wireshark, and cross-reference lab software versions against published CVE data.</li>
-<li>Contribute Python code, guardrails, and scope checks to an AI-driven penetration-testing framework, benchmarking automated results against manual testing.</li>
-<li>Conduct vulnerability assessments and basic penetration testing exercises, and document findings in standardized incident reports.</li></ul></li>
 <li><h3>GIS Technician, City of College Station</h3><span class="meta">College Station, Texas. August 2025 to present</span><ul>
+<li>Performed spatial analysis on city datasets to inform planning and infrastructure decisions.</li>
 <li>Built an AI-assisted automation for the plat digitization process, saving 3+ hours per week.</li>
-<li>Updated and modernized three outdated systems.</li>
-<li>Created and quality-checked thousands of easement, plat, and ROW records, converting paper, CAD, and GPS records into GIS data.</li>
-<li>Mapped easement abandonments and ETJ releases, and maintained the city's ETJ maps.</li>
-<li>Performed spatial analysis on city datasets, including a Midtown land use analysis and BCAD parcel, population, and business data, to inform planning decisions.</li>
+<li>Updated and modernized three outdated systems to improve the workflow.</li>
+<li>Created and quality-checked thousands of easement, plat, and ROW records to keep geodatabases accurate.</li>
 <li>Produced 30+ maps and graphics for public hearings, meetings, and other public forums.</li>
-<li>Handled cartographic design for land use, HOA, bike lane, pedestrian route, and rental registration maps.</li>
-<li>Maintained public-facing maps and datasets, and provided GIS user support to city staff.</li></ul></li>
+<li>Maintained public-facing maps and datasets, keeping accurate spatial data accessible to residents and staff.</li></ul><p><a href="#plat-digitization-automation">Read the plat project</a> · <a href="#cartography">See the maps</a></p></li>
+<li><h3>Cybersecurity Researcher, iSTAR Cybersecurity Lab</h3><span class="meta">College Station, Texas. August 2026 to present</span><ul>
+<li>Conducted vulnerability assessments and basic penetration testing exercises.</li>
+<li>Documented security findings and created standardized incident reports.</li>
+<li>Monitored network traffic and system activities to detect potential intrusions and data exfiltration.</li></ul></li>
 <li><h3>GIS Intern Technician, Roseburg Forest Products</h3><span class="meta">Roseburg, Oregon. May to August 2025</span><ul>
 <li>Digitized 18 townships of road data, allowing for more efficient logging team navigation.</li>
 <li>Used SQL to develop and manage 400 road ownership datasets, allowing for faster data access.</li>
@@ -190,18 +193,18 @@ dialog.lb button{position:fixed;top:14px;right:16px;background:var(--panel);colo
 <li>Collected several miles of road condition data using ArcGIS Field Maps.</li></ul><p><a href="#roseburg-road-ownership">Read the project</a></p></li>
 <li><h3>Manager (Seasonal), El Patio Foods</h3><span class="meta">Austin, Texas. March 2023 to present</span><ul>
 <li>Drove a 75% daily revenue increase by optimizing and standardizing workflows.</li>
-<li>Doubled service speed through problem-solving and critical decision-making.</li>
-<li>Managed a team of 30+ employees.</li></ul></li></ol>
-<h2>Skills</h2><div class="grp">
-<div><p class="meta">GIS</p><ul class="chips"><li>ArcGIS Pro</li><li>ArcGIS Online</li><li>Web Maps</li><li>Field Maps</li><li>Survey123</li><li>ModelBuilder</li><li>Spatial analysis</li><li>QA/QC</li><li>Data management</li></ul></div>
-<div><p class="meta">Programming and data</p><ul class="chips"><li>Python</li><li>SQL</li><li>R</li><li>AI automation</li><li>Workflow automation</li><li>Data analytics</li></ul></div>
-<div><p class="meta">Security</p><ul class="chips"><li>Security test automation</li><li>Vulnerability identification</li><li>Network traffic analysis (Wireshark)</li></ul></div>
-<div><p class="meta">Design, software, and cloud</p><ul class="chips"><li>Adobe Illustrator</li><li>Adobe InDesign</li><li>Microsoft Excel</li><li>Microsoft Office Suite</li><li>AWS Cloud Suite</li><li>Database management</li></ul></div></div>
-<h2>Certificates</h2><ul class="chips"><li>Classifying Objects Using Deep Learning</li><li>Building Geoprocessing Models</li><li>Esri Python Certificate</li><li>Esri Spatial Analysis Certificate</li><li>CompTIA Security+ (in progress)</li><li>Hack The Box Certified Junior Cybersecurity Associate (in progress)</li></ul>
-<h2>Organizations</h2><ul><li>TAMU Cyber Security Club, member, August 2026 to present</li><li>TAMU Judo, social media manager, officer, and national champion, August 2022 to May 2025</li></ul>
+<li>Applied problem-solving and critical decision-making to double service speed.</li>
+<li>Oversaw employee and inventory data to ensure smooth operations.</li>
+<li>Managed, organized, and allocated tasks to a team of 30+ employees.</li></ul></li></ol>
+<h2>Technical skills</h2><div class="grp">
+<div><p class="meta">GIS</p><ul class="chips"><li>ArcGIS Pro</li><li>ArcGIS Online</li><li>Spatial Analysis</li><li>Data Management</li></ul></div>
+<div><p class="meta">Programming and data</p><ul class="chips"><li>Python</li><li>SQL</li><li>AI Automation</li><li>Data Analytics</li></ul></div>
+<div><p class="meta">Cloud and IT</p><ul class="chips"><li>AWS Cloud Suite</li><li>Microsoft Excel</li><li>Microsoft Office Suite</li><li>Database Management</li></ul></div></div>
+<h2>Certificates</h2><ul class="chips"><li>Classifying Objects Using Deep Learning</li><li>Building Geoprocessing Models</li><li>Esri's Python Certificate</li><li>Esri's Spatial Analysis Certificate</li></ul>
+<h2>Organizations and activities</h2><ul><li>TAMU Cyber Security Club, member, August 2026 to present</li><li>TAMU Judo, social media manager, officer, and national champion, August 2022 to May 2025</li></ul>
 <section id="contact"><h2>Contact</h2><p class="links"><a href="mailto:eric13siaba@gmail.com">eric13siaba@gmail.com</a><a href="https://linkedin.com/in/eric-siaba">linkedin.com/in/eric-siaba</a><a href="https://docs.google.com/document/d/101Xl3qMgBMFno9ogCfwZh5WUHGG5JG5vVGEvMIE9D7w/preview">Resume</a></p></section></div></div><div class="view" id="v-home" hidden><div class="wrap"><header class="hero"><h1>Eric Siaba<span>GIS and spatial analysis</span></h1>
 <p class="lead">GIS technician at the City of College Station. Texas A&amp;M GIST, graduating December 2026.</p>
-<div class="tags"><span class="tag"><i></i>GIS and spatial data</span><span class="tag cy"><i></i>Python and workflow automation</span></div>
+<div class="tags"><span class="tag"><i></i>Looking for a GIS Analyst role in Dallas-Fort Worth, starting January 2027</span></div>
 <div class="btns"><a class="btn main" href="#projects">See projects</a><a class="btn" href="#resume">Resume</a></div>
 <div class="scale"><div><b>50+</b><small>maps made at the city and Roseburg</small></div><div><b>Thousands</b><small>of easement, plat, and ROW records created and checked</small></div><div><b>5+</b><small>processes automated</small></div><div><b>3.48</b><small>GPA, BS in GIST</small></div></div></header>
 <section id="about"><h2>About</h2><p>I'm an automation-minded technical professional with hands-on experience in GIS and data analytics. I've modernized legacy systems, analyzed complex datasets, and maintained public-facing spatial data for a city government and a corporation. I'm finishing my BS in Geographic Information Systems &amp; Technology at Texas A&amp;M and applying Python, SQL, and ArcGIS Pro to improve data accuracy and decision-making.</p>
